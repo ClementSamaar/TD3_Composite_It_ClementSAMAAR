@@ -12,21 +12,17 @@ public class NoeudInterne extends Expression{
     public double calculerValeur() {
         switch (operateurBinaire){
             case '*':
-                premiereOperande * deuxiemeOperande;
-                break;
+                return premiereOperande.calculerValeur() * deuxiemeOperande.calculerValeur();
             case '+':
-                premiereOperande + deuxiemeOperande;
-                break;
+                return premiereOperande.calculerValeur() + deuxiemeOperande.calculerValeur();
             case '/':
-                premiereOperande / deuxiemeOperande;
-                break;
+                return premiereOperande.calculerValeur() / deuxiemeOperande.calculerValeur();
             case '-':
-                premiereOperande - deuxiemeOperande;
-                break;
+                return premiereOperande.calculerValeur() - deuxiemeOperande.calculerValeur();
             default:
-                System.out.println("Erreur : Opérateur inconnu");
+                System.out.println("Erreur : Opérateur inconnu, les deux opérandes seront divisées");
+                return premiereOperande.calculerValeur() / deuxiemeOperande.calculerValeur();
         }
-        return 0;
     }
 
     /* Constructeur */
@@ -36,14 +32,4 @@ public class NoeudInterne extends Expression{
         deuxiemeOperande = e2;
         operateurBinaire = operateur;
     }
-
-    /*public NoeudInterne(Nombre nb1, Nombre nb2, char operateur){
-        super();
-        operateurBinaire = operateur;
-    }
-
-    public NoeudInterne(Nombre nb1, char operateur){
-        super();
-        operateurBinaire = operateur;
-    }*/
 }

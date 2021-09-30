@@ -8,15 +8,7 @@ public class Nombre extends Expression{
     /* METHODES */
     @Override
     public double calculerValeur() {
-        return 0;
-    }
-
-    public int getValeur() {
         return valeur;
-    }
-
-    public void setValeur(int valeur) {
-        this.valeur = valeur;
     }
 
     /* Constructeur */
