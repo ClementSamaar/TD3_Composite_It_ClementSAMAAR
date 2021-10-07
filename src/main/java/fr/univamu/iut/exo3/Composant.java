@@ -1,4 +1,4 @@
-package fr.univamu.iut.exo2;
+package fr.univamu.iut.exo3;
 
 public abstract class Composant {
 

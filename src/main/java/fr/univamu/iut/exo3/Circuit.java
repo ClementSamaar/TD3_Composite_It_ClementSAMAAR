@@ -1,15 +1,15 @@
-package fr.univamu.iut.exo2;
+package fr.univamu.iut.exo3;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+//(Pattern Composite)
 public class Circuit extends Composant{
     private ArrayList<Composant> listComposant = new ArrayList();
     @Override
     public void executer() {
-        System.out.print("\nCircuit éléctronique\n");
-        for (int i = 0; i < listComposant.size(); i++) {
-            listComposant.get(i).executer();
+        System.out.print("\nCircuit électronique\n");
+        for (Composant composant : listComposant) {
+            composant.executer();
         }
     }
 
@@ -18,12 +18,15 @@ public class Circuit extends Composant{
     }
     public void supprimerComposant(Composant c){
         for (int i = 0; i < listComposant.size(); i++) {
-            if(listComposant.get(i).equals(c)) listComposant.remove(i);
+            if(listComposant.get(i).equals(c)) {
+                listComposant.remove(i);
+                break;
+            }
         }
     }
-    //public Composant getComposant(Composant c){
-
-    //}
+    public ArrayList<Composant> getComposant(){
+        return listComposant;
+    }
 
     public Circuit(){}
 

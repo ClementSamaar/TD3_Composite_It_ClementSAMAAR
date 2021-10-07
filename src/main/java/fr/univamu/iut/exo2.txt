@@ -1,0 +1,2 @@
+Le pattern builder permet d'alléger les constucteurs et de décomplexifier l'implémentation. Dans la classe Velo,
+on pourra supprimer deux constructeurs et mieux gérer les attributs facultatifs.

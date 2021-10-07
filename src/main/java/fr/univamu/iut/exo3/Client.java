@@ -1,5 +1,8 @@
-package fr.univamu.iut.exo2;
+package fr.univamu.iut.exo3;
 
+import java.util.ArrayList;
+
+//(Pattern Composite)
 public class Client {
     public static void main(String[] args) {
         Circuit circuit1 = new Circuit();
@@ -11,6 +14,11 @@ public class Client {
         circuit1.ajouterComposant(resistance1);
         circuit1.executer();
         circuit1.supprimerComposant(diode1);
-        circuit1.executer();
+        ArrayList<Composant> listCircuit1 = circuit1.getComposant();
+        System.out.print("Les composants restants sont :\n");
+        for (Composant composant : listCircuit1) {
+            System.out.print(composant);
+            System.out.print("\n");
+        }
     }
 }
